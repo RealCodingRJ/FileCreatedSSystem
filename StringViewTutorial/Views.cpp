@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char argv[]) {
 
 
-	if (!isRunningCommand(argv)) {
+	if (isRunningCommand(argv)) {
 
 		if (sizeof(argc) == 0) {
 
