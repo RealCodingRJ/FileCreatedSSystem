@@ -56,8 +56,8 @@ int main(int argc, char argv[]) {
 
 		}
 
-
-		system("pause > 0");
-		return 0;
 	}
+
+	system("pause > 0");
+	return 0;
 }
