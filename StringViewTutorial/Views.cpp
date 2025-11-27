@@ -10,7 +10,6 @@ using namespace std;
 int main(int argc, char argv[]) {
 
 
-
 	if (!isRunningCommand(argv)) {
 
 		if (sizeof(argc) == 0) {
@@ -20,37 +19,44 @@ int main(int argc, char argv[]) {
 
 				const std::fstream file("main.ts");
 
-				if (file.is_open()) {
+				if (file.good()) {
+
+					if (file.is_open()) {
 
 
-					Sleep(1);
+						Sleep(1);
 
-					std::cout << message("File was Created..") << std::endl;
+						std::cout << message("File was Created..") << std::endl;
 
+
+					}
 
 				}
-
-			}
 		
 
-			else if (argv == "--js") {
 
-				const std::fstream file("main.js");
+				else if (argv == "--js") {
 
-				if (file.is_open()) {
+					const std::fstream file("main.js");
+
+					if (file.good()) {
+					
+						if (file.is_open()) {
 
 
-					Sleep(1);
+							Sleep(1);
 
-					std::cout << message("File was Created..") << std::endl;
-				
+							std::cout << message("File was Created..") << std::endl;
+
+						}
+
+					}
 				}
-
 			}
-		
+
 		}
 
-	
+
 		system("pause > 0");
 		return 0;
 	}
